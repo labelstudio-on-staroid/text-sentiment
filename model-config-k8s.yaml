@@ -5,4 +5,4 @@ metadata:
   labels:
     dependency.staroid.com/export: labelstudio-model-config
 data:
-  namespace: "{{.Namespace}}" 
+  MODEL_NAMESPACE: "{{.Namespace}}" 
