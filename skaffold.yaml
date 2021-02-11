@@ -11,7 +11,7 @@ deploy:
   kubectl:
     manifests:
       - text-sentiment-k8s.yaml
-      - model-config-k8s.yaml
+      - ml-backend-config-k8s.yaml
 profiles:
   - name: minikube
     patches:

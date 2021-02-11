@@ -10,4 +10,4 @@ ingress:
 - serviceName: text-sentiment
   port: 9090
 deploy:
-  implements: labelstudio-on-staroid/ml-model
+  implements: labelstudio-on-staroid/ml-backend
