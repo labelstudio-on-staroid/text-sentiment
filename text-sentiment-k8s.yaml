@@ -1,0 +1,31 @@
+# Kubernetes manifests for label studio
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: text-sentiment
+spec:
+  replicas: 1
+  strategy:
+    type: "Recreate"
+  selector:
+    matchLabels:
+      app: text-sentiment
+  template:
+    metadata:
+      labels:
+        app: text-sentiment
+    spec:
+      containers:
+      - name: text-sentiment
+        image: text-sentiment
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: text-sentiment
+spec:
+  ports:
+  - name: http
+    port: 9090
+  selector:
+    app: text-sentiment
