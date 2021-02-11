@@ -15,6 +15,7 @@ spec:
       labels:
         app: text-sentiment
     spec:
+      serviceAccountName: root
       containers:
       - name: text-sentiment
         image: text-sentiment
